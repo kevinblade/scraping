@@ -11,7 +11,13 @@
 ## 디버깅 방법
 
 * 리포지토리 폴더에서
-  `$ docker compose build`
-* VSCode 상에서 "Python: Attach BS4" 또는 "Python: Attach Playwright"를 선택 후 디버깅 진행
 
+```
+$ docker compose build
+```
+## 적용 라이브러리
+
+* BeautifulSoup4
+* Playwright
+* Scrapy
 

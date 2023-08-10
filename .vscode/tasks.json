@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "docker-run-bs4",
+      "type": "process",
+      "command": "docker",
+      "isBackground": true,
+      "args": ["compose", "run", "--rm", "-p", "5678:5678", "bs4"],
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": ".",
+          }
+        }
+      ]
+    },
+    {
+      "label": "docker-run-playwright",
+      "type": "process",
+      "command": "docker",
+      "isBackground": true,
+      "args": ["compose", "run", "--rm", "-p", "5678:5678", "playwright"],
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": ".",
+          }
+        }
+      ]
+    }
+  ]
+}

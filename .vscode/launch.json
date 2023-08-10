@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Attach BS4",
+      "type": "python",
+      "request": "attach",
+      "preLaunchTask": "docker-run-bs4",
+      "connect": {
+        "host": "localhost", // replace this with remote machine name
+        "port": 5678
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/bs4",
+          "remoteRoot": "."
+        }
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Attach Playwright",
+      "type": "python",
+      "request": "attach",
+      "preLaunchTask": "docker-run-playwright",
+      "connect": {
+        "host": "localhost", // replace this with remote machine name
+        "port": 5678
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/playwright",
+          "remoteRoot": "."
+        }
+      ],
+      "justMyCode": true
+    }
+  ]
+}

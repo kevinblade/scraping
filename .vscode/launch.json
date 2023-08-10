@@ -37,6 +37,23 @@
         }
       ],
       "justMyCode": true
+    },
+    {
+      "name": "Python: Attach Scrapy",
+      "type": "python",
+      "request": "attach",
+      "preLaunchTask": "docker-run-scrapy",
+      "connect": {
+        "host": "localhost", // replace this with remote machine name
+        "port": 5678
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/scrapy",
+          "remoteRoot": "."
+        }
+      ],
+      "justMyCode": true
     }
   ]
 }

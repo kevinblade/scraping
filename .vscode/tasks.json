@@ -50,6 +50,30 @@
           }
         }
       ]
+    },
+    {
+      "label": "docker-run-scrapy",
+      "type": "process",
+      "command": "docker",
+      "isBackground": true,
+      "args": ["compose", "run", "--rm", "-p", "5678:5678", "scrapy"],
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": ".",
+          }
+        }
+      ]
     }
   ]
 }
